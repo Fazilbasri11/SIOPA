@@ -1,0 +1,267 @@
+@import url(//db.onlinewebfonts.com/c/647a7208a3f353750207213a569815d4?family=Chronicle+Display);
+@import url(//db.onlinewebfonts.com/c/1064f0ad1cb65fdab43bb592ddd8aa91?family=Gilroy-Bold);
+
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Chronicle Display;
+    background-color: #0C1E27;
+}
+
+/* navbar */
+
+.logouttbl {
+    font-family: 'Roboto-Regular';
+}
+
+.logo a {
+    font-size: 30px;
+    font-weight: 800px;
+    margin-left: 5%;
+    float: left;
+    font-family: 'Roboto-Regular';
+    color: white;
+    text-decoration: none;
+}
+
+
+.menu {
+    float: right;
+    margin-right: 5%;
+}
+
+nav {
+    width: 100%;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: fixed;
+    position: -webkit-sticky;
+    top: 0;
+    box-shadow: 4px 17px 47px 22px rgba(12, 30, 39, 0.69);
+    background: rgba(12, 30, 39, 0.85);
+    z-index: 1;
+    backdrop-filter: blur(3px);
+}
+
+.titlee {
+    font-size: 14px;
+    position: absolute;
+    float: left;
+    margin-top: 25px;
+    margin-left: 5%;
+    font-family: 'Roboto-Regular';
+    color: white;
+    text-decoration: none;
+}
+
+.fa-instagram {
+    color: white;
+    position: absolute;
+    float: left;
+    margin-top: 9%;
+    margin-left: 81%;
+}
+
+.fa-facebook-square {
+    color: white;
+    position: absolute;
+    float: left;
+    margin-top: 10%;
+    margin-left: 81%;
+}
+
+.fa-twitter {
+    color: white;
+    position: absolute;
+    float: left;
+    margin-top: 12%;
+    margin-left: 81%;
+}
+
+.wrapper1 {
+    width: 100%;
+    margin: auto;
+    /* position: relative; */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    font-family: 'Roboto-Regular';
+    float: left;
+}
+
+nav ul li .logintbl {
+    font-family: 'Roboto-Regular';
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: none;
+}
+
+nav ul li .logintbl:hover {
+    font-family: 'Roboto-Regular';
+    text-decoration: underline;
+    color: #FBD784
+}
+
+
+/* 
+POPUP LOGIN */
+
+.judulpop1 {
+    font-family: Chronicle Display;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+.popup1 {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+.container {
+    color: white;
+}
+
+.utama {
+    margin-top: 15%;
+    text-align: center;
+    font-family: Chronicle Display;
+}
+
+/* utama */
+
+.utama {
+    padding-top: 270px;
+    padding-bottom: 200px;
+    text-align: center;
+    font-family: Chronicle Display;
+    color: white;
+    margin: auto;
+    background-image: url(../img/fmipa2.jpg);
+    background-repeat: no-repeat;
+}
+
+.utama h1 {
+    font-size: 50px;
+    color: white;
+}
+
+.utama a {
+    text-decoration: none;
+    color: #FBD784;
+}
+
+.utama a:hover {
+    text-decoration: underline;
+}
+
+.scroll a {
+    background-color: none;
+    color: #FBD784;
+    text-decoration: none;
+    padding-left: 0%;
+}
+
+.scroll a:hover {
+    text-decoration: underline;
+}
+
+
+/* section1 */
+
+section {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    text-align: justify;
+}
+
+section p {
+    font-size: 18px;
+    font-family: Gilroy-Bold;
+}
+
+h3 {
+    color: #FBD784;
+    font-size: 18px;
+    font-family: Chronicle Display;
+}
+
+h1 {
+    font-family: Chronicle Display;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+/* unutk foto */
+
+.foto2 {
+    padding-top: 20px;
+    width: 600px;
+    border: 1px solid #0B1D26;
+    box-sizing: border-box;
+    filter: drop-shadow(12px 11px 13px rgba(0, 0, 0, 0.3));
+}
+
+.foto {
+    display: flex;
+    align-items: stretch;
+}
+
+/* daftar kolom sub internal */
+
+.list-group-item {
+    font-family: Gilroy-Bold;
+    font-size: 14px;
+}
+
+.internalbem {
+    padding-top: 80px;
+}
+
+/* daftarbtn */
+.daftar {
+    color: #0B1D26;
+    background: #FBD784;
+    box-shadow: 6px 14px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: Gilroy-Bold;
+    font-size: 16px;
+    height: 50px;
+}
+
+.btndaftar {
+    float: right;
+
+}
+
+/* footer */
+footer {
+
+    font-family: Gilroy-Bold;
+    font-size: 16px;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
