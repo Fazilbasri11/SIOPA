@@ -11,4 +11,5 @@
 <script src="https://kit.fontawesome.com/344a998c5f.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="{{asset('css/halaman.css') }}">
 <link rel="icon" href="img/usk.png" type="image/gif">
+<link rel="stylesheet" href="{{asset('css/form.css')}}">
 <title>SIOPA</title>
