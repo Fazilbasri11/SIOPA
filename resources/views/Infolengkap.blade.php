@@ -130,7 +130,7 @@
             </div>
             <section id="kolomdaftar">
                 <div class="btndaftar">
-                    <button type="button" class="btn btn-link daftar">Daftar Sekarang!</button>
+                    <a href="{{route('daftar')}}" type="button" class="btn btn-link daftar" >Daftar Sekarang!</a>
                 </div>
             </section>
         </section>
