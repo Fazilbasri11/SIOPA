@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +27,7 @@ route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogi
 
 Route::get('info', function () {
     return view('infolengkap');
-});
+})->name('info');
 
 Route::get('admin', function () {
     return view('admin');
@@ -40,3 +42,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin,user']], function () {
 
     route::get('/dua', [HomeController::class, 'dua'])->name('dua');
 });
+
+route::get('/detail', function(){return view('detail');})->name('detail');
+
+route::get('/daftar', function(){return view('form');})->name('daftar');

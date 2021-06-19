@@ -1,0 +1,24 @@
+.page{
+	padding-top: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: auto;
+    background-image: url(img/fmipa2.jpg);
+    background-repeat: no-repeat;
+}
+
+
+
+.container{
+	width: 90%;
+	margin-top: 3%;
+	
+	padding: 40px;
+	
+
+}
+

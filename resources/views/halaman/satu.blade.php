@@ -1,3 +1,18 @@
+<?php
+    
+    //koneksi database
+    $server = "localhost";
+    $user = "root";
+    $pass = "";
+    $database = "siopa";
+
+    $koneksi = mysqli_connect($server, $user, $pass, $database)or die(mysqli_error($koneksi));
+
+?>
+
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -22,44 +37,67 @@
                 untuk
                 mengetahui infomasi dari organisasi yang berada dilingkungan FMIPA.</h5>
             <br>
-            <div class="scrolld">
-                <a class="scroll" href="#kolom1" role="button">Scroll Down &nbsp <i
-                        class="fas fa-angle-double-down kebawah"></i></a></button>
-            </div>
+            <br>
+            <h1 class="text-center">Badan Eksekutif Mahasiswa<br> FMIPA USK</h1>
+            <br><br><br><br><br>
+        
+    
         </div>
-        <div class="container">
-            <<!-- On tables -->
-<table class="table-primary">...</table>
-<table class="table-secondary">...</table>
-<table class="table-success">...</table>
-<table class="table-danger">...</table>
-<table class="table-warning">...</table>
-<table class="table-info">...</table>
-<table class="table-light">...</table>
-<table class="table-dark">...</table>
+        
+        <!-- tabel-->
+        
+    <div class="cardtabel">
+      <div class="card-header bg-transparent text-white text-center">
+        <h4>Daftar Mahasiswa Pendaftar</h4>
+      </div>
+      <div class="card-body">
+        <table class="table table-hover table-striped">
+            <tr>
+                <th class="text-center">No.</th>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Status Form</th>
+                <th>&nbsp;&nbsp;&nbsp;Detail</th>
+            </tr>
 
-<!-- On rows -->
-<tr class="table-primary">...</tr>
-<tr class="table-secondary">...</tr>
-<tr class="table-success">...</tr>
-<tr class="table-danger">...</tr>
-<tr class="table-warning">...</tr>
-<tr class="table-info">...</tr>
-<tr class="table-light">...</tr>
-<tr class="table-dark">...</tr>
+            <?php
+                $no = 1;
+                $tampil = mysqli_query($koneksi, "SELECT * from dataform order by nim");
+                while($data = mysqli_fetch_array($tampil)) :
 
-<!-- On cells (`td` or `th`) -->
-<tr>
-  <td class="table-primary">...</td>
-  <td class="table-secondary">...</td>
-  <td class="table-success">...</td>
-  <td class="table-danger">...</td>
-  <td class="table-warning">...</td>
-  <td class="table-info">...</td>
-  <td class="table-light">...</td>
-  <td class="table-dark">...</td>
-</tr>
+                    if ($no%2 == 0) :
+                        
+            ?>
+                <tr>
+                <td class="text-center"><?=$no++?></td>
+                <td><?=$data['nim']?></td>
+                <td><?=$data['nama']?></td>
+                <td><?=$data['statusform']?></td>
+                <td>
+                    <a href="{{ route('detail')}}" class="btn btn-transparent text-dark">Lihat detail </a>
+                    
+                </td>
+            </tr>
+
+                    <?php else: ?>
+
+            <tr>
+                <td class="text-white text-center"><?=$no++?></td>
+                <td class="text-white"><?=$data['nim']?></td>
+                <td class="text-white"><?=$data['nama']?></td>
+                <td class="text-white"><?=$data['statusform']?></td>
+                <td>
+                    <a href="{{ route('detail')}}" class="btn btn-transparent text-white"> Lihat detail </a>
+                    
+                </td>
+            </tr>
+            <?php endif;?>
+        <?php endwhile; //penutup loop while ?>
+        </table>
+
+      </div>
     </div>
+
 
     <footer>
         @include('template.footer')
